@@ -149,7 +149,7 @@ namespace AddressBooks
             Console.WriteLine("Enter 5-To Write AddressBook in File");
             Console.WriteLine("Enter 6-To Read a File");
             Console.WriteLine("Enter 7-Perform Csv Operations");
-
+            Console.WriteLine("Enter 8-Read and Write Operation in Json File");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -172,7 +172,10 @@ namespace AddressBooks
                     FileOperations.ReadAddressBook();
                     break;
                 case 7:
-                    CsvOperation.CSVOperation(numberNames);
+                    CsvOperation.CSVOperation(numberNames,1);
+                    break;
+                case 8:
+                    CsvOperation.CSVOperation(numberNames, 2);
                     break;
 
                 default:
@@ -212,6 +215,7 @@ namespace AddressBooks
                     Console.WriteLine("Count of people in State is: {0}", i.Value.Count);
                 }
             }
+            
 
         }
 
